@@ -6,6 +6,9 @@
 #include <string>
 #include <algorithm>
 
+namespace ecs
+{
+
 using namespace std;
 
 // Máximo inteiro com 32 bits (unsigned): 4294967295
@@ -137,5 +140,7 @@ ostream& operator<< (ostream& stream, const bigint& num)
     stream << num.show();
     return stream;
 }
+
+} /** namespace ecs **/
 
 #endif /** __BIGINT_HPP__ **/

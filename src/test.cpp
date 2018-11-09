@@ -1,11 +1,19 @@
 #include "bigint.hpp"
 
+using namespace ecs;
+
 template <typename F>
 bool throws(F& lambda)
 {
     try{lambda();}
     catch(int e){return true;}
     return false;
+}
+
+template <typename F>
+bool throws(F&& lambda)
+{
+    return throws((F&) lambda);
 }
 
 template <typename T>
