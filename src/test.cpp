@@ -102,18 +102,18 @@ int main()
     );
 
     // Operator ++
-    tprint("Pre increment ",
+    tprint("Pre incremento ",
         (++bigint("9999999999999999999999999999999999")).show(),
         "010000000000000000000000000000000000"
     );
 
-    tprint("Post increment returns previous value",
+    tprint("Pos incremento retorna o valor anterior",
         (bigint("9999999999999999999999999999999999")++).show(),
         "009999999999999999999999999999999999"
     );
 
     v1++;
-    tprint("Post increment really increments",
+    tprint("Pos incremento realmente incrementa",
         v1.show(),
         "000000002"
     );
