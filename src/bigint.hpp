@@ -58,6 +58,7 @@ class bigint
             }
         }
 
+        // Tenho tudo o que preciso para operator+, então porque não?
         bigint operator+(const bigint& other) const
         {
             auto ret = bigint(0);
@@ -66,6 +67,13 @@ class bigint
         }
 
         bigint operator++(int)
+        {
+            auto ret = *this;
+            ++(*this);
+            return ret;
+        }
+
+        bigint& operator++()
         {
             bufferSum(&this->buffer, this->buffer, bigint(1).buffer);
             return *this;

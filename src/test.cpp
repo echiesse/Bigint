@@ -102,9 +102,19 @@ int main()
     );
 
     // Operator ++
-    tprint("Operator ++",
-        (bigint("9999999999999999999999999999999999")++).show(),
+    tprint("Pre increment ",
+        (++bigint("9999999999999999999999999999999999")).show(),
         "010000000000000000000000000000000000"
     );
 
+    tprint("Post increment returns previous value",
+        (bigint("9999999999999999999999999999999999")++).show(),
+        "009999999999999999999999999999999999"
+    );
+
+    v1++;
+    tprint("Post increment really increments",
+        v1.show(),
+        "000000002"
+    );
 }
