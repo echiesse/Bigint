@@ -15,8 +15,8 @@ jobs:
     - name: build
       run: |
         cd src
-        build_test
+        .\build_test
     - name: test
       run: |
         cd src
-        test
+        .\test
